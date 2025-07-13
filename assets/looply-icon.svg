@@ -1,0 +1,27 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1024" height="1024" fill="#1877F2" rx="160"/>
+  
+  <!-- Main Loop Design -->
+  <g transform="translate(512,512)">
+    <!-- Outer Circle -->
+    <circle cx="0" cy="0" r="300" fill="none" stroke="#ffffff" stroke-width="40" stroke-linecap="round"/>
+    
+    <!-- Inner Circles (representing habit completion) -->
+    <circle cx="-120" cy="-120" r="35" fill="#00C851"/>
+    <circle cx="120" cy="-120" r="35" fill="#00C851"/>
+    <circle cx="150" cy="0" r="35" fill="#00C851"/>
+    <circle cx="120" cy="120" r="35" fill="#ffffff" opacity="0.6"/>
+    <circle cx="-120" cy="120" r="35" fill="#ffffff" opacity="0.6"/>
+    <circle cx="-150" cy="0" r="35" fill="#ffffff" opacity="0.6"/>
+    
+    <!-- Central Arrow/Loop indicator -->
+    <path d="M -30,-30 L 30,0 L -30,30 Z" fill="#ffffff" transform="rotate(45)"/>
+    
+    <!-- Progress Arc -->
+    <path d="M 0,-300 A 300,300 0 0,1 212,212" fill="none" stroke="#00C851" stroke-width="50" stroke-linecap="round"/>
+  </g>
+  
+  <!-- App Name -->
+  <text x="512" y="850" text-anchor="middle" fill="#ffffff" font-family="serif" font-size="80" font-weight="bold">Looply</text>
+</svg>

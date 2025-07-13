@@ -1,11 +1,14 @@
 {
-  "name": "habbit-tracker",
+  "name": "looply",
   "version": "1.0.0",
+  "description": "The smart habit tracker that helps you build consistent loops of positive behavior",
   "main": "index.js",
+  "keywords": ["habit-tracker", "productivity", "habits", "react-native", "expo"],
+  "author": "Looply Team",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "web": "expo start --web"
   },
   "dependencies": {

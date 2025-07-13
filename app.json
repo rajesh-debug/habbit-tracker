@@ -1,8 +1,9 @@
 {
   "expo": {
-    "name": "Habit Tracker",
-    "slug": "habit-tracker",
-    "version": "1.0.0",
+    "name": "Looply",
+    "slug": "looply",
+    "version": "1.0.1",
+    "description": "The smart habit tracker that helps you build consistent loops of positive behavior",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -10,14 +11,14 @@
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#4CAF50"
+      "backgroundColor": "#1877F2"
     },
     "plugins": [
       [
         "expo-notifications",
         {
           "icon": "./assets/icon.png",
-          "color": "#4CAF50",
+          "color": "#1877F2",
           "sounds": []
         }
       ]
@@ -25,27 +26,31 @@
     "ios": {
       "supportsTablet": true,
       "infoPlist": {
-        "UIBackgroundModes": ["background-fetch"]
+        "UIBackgroundModes": [
+          "background-fetch"
+        ]
       }
     },
     "android": {
+      "versionCode": 2,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#4CAF50"
+        "backgroundColor": "#1877F2"
       },
       "permissions": [
         "android.permission.RECEIVE_BOOT_COMPLETED",
         "android.permission.VIBRATE",
         "android.permission.WAKE_LOCK"
       ],
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": false,
+      "package": "com.looply.app"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "notification": {
       "icon": "./assets/icon.png",
-      "color": "#4CAF50"
+      "color": "#1877F2"
     }
   }
 }
