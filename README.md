@@ -211,4 +211,4 @@ This project is open source and available under the MIT License.
 2. Create feature branch
 3. Submit pull request with detailed description
 
-Built with ❤️ using React Native and Expo
+Built with ❤️ using React Native and Expo# habbit-tracker
