@@ -84,14 +84,9 @@ const HabitItem = ({ habit, onToggle, onDelete, onEdit }) => {
           <Text style={[styles.habitName, habit.completed && styles.completedText]}>
             {habit.name}
           </Text>
-          {habit.priority === 'high' && (
-            <View style={styles.priorityBadge}>
-              <Text style={styles.priorityText}>!</Text>
-            </View>
-          )}
         </View>
         <View style={styles.streakContainer}>
-          <Text style={[styles.streakText, { color: streakColor }]}>
+          <Text style={styles.streakText}>
             {getStreakText()}
           </Text>
           {habit.reminderInterval && (
@@ -195,6 +190,7 @@ const styles = StyleSheet.create({
       ios: 'Times New Roman',
       android: 'serif',
     }),
+    color: colors.textSecondary, // Use consistent neutral color
   },
   reminderText: {
     fontSize: 12,

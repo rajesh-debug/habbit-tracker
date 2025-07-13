@@ -200,7 +200,6 @@ const HomeScreen = () => {
           <Text style={styles.settingsIcon}>⚙️</Text>
         </TouchableOpacity>
         <View style={styles.headerCenter}>
-          <Text style={styles.title}>Habit Tracker</Text>
           <View style={styles.viewToggle}>
             <TouchableOpacity
               style={[styles.toggleButton, viewMode === 'daily' && styles.activeToggle]}
@@ -356,7 +355,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 20,
-    paddingTop: 20,
+    paddingTop: 60, // Increased from 20 to 60 for notch/camera spacing
     paddingBottom: 20,
     backgroundColor: colors.surface,
     borderBottomWidth: 1,
@@ -386,6 +385,7 @@ const styles = StyleSheet.create({
   headerCenter: {
     flex: 1,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   title: {
     fontSize: 28,

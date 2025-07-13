@@ -148,14 +148,14 @@ const WeeklyView = ({ habits, onToggleHabit, onSwitchToDaily, onEditHabit }) => 
                         {getIconById(habit.icon.id)?.emoji || habit.icon.emoji}
                       </Text>
                     )}
-                    <Text style={styles.habitName} numberOfLines={1} ellipsizeMode="tail">
+                    <Text style={[
+                      styles.habitName,
+                      habit.priority === 'high' ? styles.highPriorityText :
+                      habit.priority === 'normal' ? styles.normalPriorityText :
+                      styles.lowPriorityText
+                    ]} numberOfLines={1} ellipsizeMode="tail">
                       {habit.name}
                     </Text>
-                    {/* Priority Icon */}
-                    <Text style={styles.priorityIcon}>
-                      {habit.priority === 'high' ? '🔴' : habit.priority === 'normal' ? '🟡' : '🟢'}
-                    </Text>
-                    <Text style={styles.editIcon}>✏️</Text>
                   </View>
                 </TouchableOpacity>
 
@@ -218,7 +218,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 20,
-    paddingVertical: 18,
+    paddingTop: 60, // Added top padding for notch/camera
+    paddingBottom: 18,
     backgroundColor: colors.surface,
     borderBottomWidth: 1,
     borderBottomColor: colors.border,
@@ -267,8 +268,8 @@ const styles = StyleSheet.create({
     borderBottomColor: colors.borderLight,
   },
   habitNameColumn: {
-    width: dayWidth * 2.5, // Increased from 2 to 2.5 for even wider column
-    paddingHorizontal: 10,
+    width: dayWidth * 3, // Increased from 2.5 to 3 for wider column
+    paddingHorizontal: 12,
     justifyContent: 'center',
     height: 48,
     borderRightWidth: 1,
@@ -289,13 +290,18 @@ const styles = StyleSheet.create({
       ios: 'Times New Roman',
       android: 'serif',
     }),
-    color: colors.textPrimary,
     fontWeight: '500',
     flex: 1,
     marginHorizontal: 4,
   },
-  priorityIcon: {
-    fontSize: 10,
+  highPriorityText: {
+    color: colors.error, // Red for high priority
+  },
+  normalPriorityText: {
+    color: colors.textPrimary, // Normal color
+  },
+  lowPriorityText: {
+    color: colors.textSecondary, // Gray for low priority
   },
   editIcon: {
     fontSize: 8, // Reduced from 10
