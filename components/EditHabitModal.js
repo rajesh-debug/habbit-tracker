@@ -15,7 +15,6 @@ import {
 import IconPicker from './IconPicker';
 import { getRandomIcon } from '../utils/habitIcons';
 import { colors } from '../utils/colorTheme';
-import { textStyles } from '../utils/typography';
 
 const EditHabitModal = ({ visible, habit, onClose, onUpdateHabit, onDeleteHabit }) => {
   const [habitName, setHabitName] = useState('');
@@ -301,7 +300,10 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     fontWeight: 'bold',
-    fontFamily: textStyles.h4.fontFamily,
+    fontFamily: Platform.select({
+      ios: 'Times New Roman',
+      android: 'serif',
+    }),
     color: colors.textPrimary,
   },
   saveButton: {
@@ -328,14 +330,20 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 16,
     fontWeight: 'bold',
-    fontFamily: textStyles.h5.fontFamily,
+    fontFamily: Platform.select({
+      ios: 'Times New Roman',
+      android: 'serif',
+    }),
     color: colors.textPrimary,
     marginBottom: 12,
     marginTop: 24,
   },
   input: {
     fontSize: 16,
-    fontFamily: textStyles.input.fontFamily,
+    fontFamily: Platform.select({
+      ios: 'Times New Roman',
+      android: 'serif',
+    }),
     backgroundColor: colors.surface,
     borderRadius: 12,
     paddingHorizontal: 16,
@@ -346,7 +354,10 @@ const styles = StyleSheet.create({
   },
   characterCount: {
     fontSize: 12,
-    fontFamily: textStyles.caption.fontFamily,
+    fontFamily: Platform.select({
+      ios: 'Times New Roman',
+      android: 'serif',
+    }),
     color: colors.textSecondary,
     textAlign: 'right',
     marginBottom: 16,
@@ -372,7 +383,10 @@ const styles = StyleSheet.create({
   },
   typeButtonText: {
     fontSize: 14,
-    fontFamily: textStyles.bodySecondary.fontFamily,
+    fontFamily: Platform.select({
+      ios: 'Times New Roman',
+      android: 'serif',
+    }),
     color: colors.textPrimary,
     fontWeight: '500',
   },
@@ -400,7 +414,10 @@ const styles = StyleSheet.create({
   },
   priorityButtonText: {
     fontSize: 12,
-    fontFamily: textStyles.caption.fontFamily,
+    fontFamily: Platform.select({
+      ios: 'Times New Roman',
+      android: 'serif',
+    }),
     color: colors.textPrimary,
     fontWeight: '500',
   },
@@ -428,7 +445,10 @@ const styles = StyleSheet.create({
   },
   selectedIconLabel: {
     fontSize: 16,
-    fontFamily: textStyles.bodyText.fontFamily,
+    fontFamily: Platform.select({
+      ios: 'Times New Roman',
+      android: 'serif',
+    }),
     color: colors.textPrimary,
     fontWeight: '500',
   },
@@ -438,7 +458,10 @@ const styles = StyleSheet.create({
   },
   placeholderText: {
     fontSize: 16,
-    fontFamily: textStyles.bodyText.fontFamily,
+    fontFamily: Platform.select({
+      ios: 'Times New Roman',
+      android: 'serif',
+    }),
     color: colors.textSecondary,
   },
   chevron: {
@@ -461,7 +484,10 @@ const styles = StyleSheet.create({
   },
   reminderLabel: {
     fontSize: 14,
-    fontFamily: textStyles.bodySecondary.fontFamily,
+    fontFamily: Platform.select({
+      ios: 'Times New Roman',
+      android: 'serif',
+    }),
     color: colors.textPrimary,
     fontWeight: '500',
     flex: 1,
@@ -473,12 +499,18 @@ const styles = StyleSheet.create({
   },
   intervalLabel: {
     fontSize: 14,
-    fontFamily: textStyles.bodySecondary.fontFamily,
+    fontFamily: Platform.select({
+      ios: 'Times New Roman',
+      android: 'serif',
+    }),
     color: colors.textSecondary,
   },
   intervalInput: {
     fontSize: 14,
-    fontFamily: textStyles.bodySecondary.fontFamily,
+    fontFamily: Platform.select({
+      ios: 'Times New Roman',
+      android: 'serif',
+    }),
     backgroundColor: colors.surfaceLight,
     borderRadius: 6,
     paddingHorizontal: 12,
@@ -506,13 +538,19 @@ const styles = StyleSheet.create({
   statValue: {
     fontSize: 20,
     fontWeight: 'bold',
-    fontFamily: textStyles.h3.fontFamily,
+    fontFamily: Platform.select({
+      ios: 'Times New Roman',
+      android: 'serif',
+    }),
     color: colors.primary,
     marginBottom: 4,
   },
   statLabel: {
     fontSize: 12,
-    fontFamily: textStyles.caption.fontFamily,
+    fontFamily: Platform.select({
+      ios: 'Times New Roman',
+      android: 'serif',
+    }),
     color: colors.textSecondary,
     textAlign: 'center',
   },
@@ -526,7 +564,10 @@ const styles = StyleSheet.create({
   deleteButtonText: {
     fontSize: 16,
     fontWeight: 'bold',
-    fontFamily: textStyles.buttonText.fontFamily,
+    fontFamily: Platform.select({
+      ios: 'Times New Roman',
+      android: 'serif',
+    }),
     color: colors.textInverse,
   },
 });
